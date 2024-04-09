@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+    <persistence-unit name="irish_home_listings">
+
+        <class>Model.Agent</class>
+        <class>Model.Garagetype</class>
+        <class>Model.Property</class>
+        <class>Model.Propertytype</class>
+        <class>Model.Style</class>
+        <class>Model.User</class>
+        <class>Model.Vendor</class>
+        <class>Model.Vendors</class>
+        <class>Model.Propertycomment</class>
+        <class>Model.Propertynotes</class>
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/irish_home_listings"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="hibernate.connection.username" value="root"/>
+
+            <property name="eclipselink.connection-pool.default.initial" value="1" />
+            <property name="eclipselink.connection-pool.default.min" value="2"/>
+            <property name="eclipselink.connection-pool.default.max" value="8"/>
+            <property name="eclipselink.connection-pool.default.wait" value="1000"/>
+        </properties>
+    </persistence-unit>
+</persistence>
